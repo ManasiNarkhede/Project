@@ -1,0 +1,28 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "functions/api.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "amazon_api/public/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/functions/api.py"
+      },
+      {
+        "src": "/amazon_api/public/(.*)",
+        "dest": "/amazon_api/public/$1"
+      },
+      {
+        "src": "/",
+        "dest": "/amazon_api/public/index.html"
+      }
+    ]
+  }
+  

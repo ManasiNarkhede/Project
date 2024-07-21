@@ -21,4 +21,3 @@ python app.py
 3. Running on Server
 The application will start running on http://127.0.0.1:5000.
 
->>>>>>> 61c5f8d (Resolved merge conflicts)
